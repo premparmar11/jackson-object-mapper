@@ -1,5 +1,6 @@
 package com.org.project.jackson.object.mapper.controller;
 
+import com.org.project.jackson.object.mapper.DTO.JsonAnySetterDTO;
 import com.org.project.jackson.object.mapper.DTO.JsonPropertyDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,5 +27,10 @@ public class JacksonObjectMapperController {
 		abc.setAge(21L);
 		abc.setName("aldkjaslkdjsajdklsjd");
 		return ResponseEntity.ok(abc);
+	}
+
+	@PostMapping("/jackson/jsonAnySetter")
+	private ResponseEntity<JsonAnySetterDTO> jacksonAnyGetter(@RequestBody JsonAnySetterDTO jsonAnySetterDTO) {
+		return ResponseEntity.ok(jsonAnySetterDTO);
 	}
 }
