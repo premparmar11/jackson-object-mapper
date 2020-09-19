@@ -5,13 +5,12 @@ import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 
-
 /*
  * @JsonAnyGetter converts => json to object
  *
  * for getting o/p from
  * otherDetails : {
- * 		"age" : 21
+ * "age" : 21
  * }
  *
  * like

@@ -1,26 +1,25 @@
 package com.org.project.jackson.object.mapper.DTO;
 
+import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Map;
-
-@JsonIgnoreProperties(ignoreUnknown = true, value = {"id"}) // Ignore
+@JsonIgnoreProperties(ignoreUnknown = true, value = { "id" }) // Ignore
 @JsonInclude(JsonInclude.Include.NON_NULL) // Ignore null value
 public class JsonAnySetterDTO {
 
-//	@JsonIgnore
-	Integer id;
+	//	@JsonIgnore
+	Integer				id;
 
-	@JsonAlias({"AGE", "aGE", "umar"})
+	@JsonAlias({ "AGE", "aGE", "umar" })
 	@JsonProperty("Json Prop Name will display in response")
-	Integer age;
+	Integer				age;
 
-	Map<String, String> properties;
+	Map<String, String>	properties;
 
 	public Integer getAge() {
 		return age;
@@ -48,7 +47,7 @@ public class JsonAnySetterDTO {
 	}
 
 	@JsonAnySetter
-	public void add(String key, String value){
+	public void add(String key, String value) {
 		properties.put(key, value);
 	}
 }

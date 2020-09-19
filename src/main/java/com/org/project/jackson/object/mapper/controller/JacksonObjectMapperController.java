@@ -1,13 +1,13 @@
 package com.org.project.jackson.object.mapper.controller;
 
-import com.org.project.jackson.object.mapper.DTO.JsonAnySetterDTO;
-import com.org.project.jackson.object.mapper.DTO.JsonPropertyDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.org.project.jackson.object.mapper.DTO.JsonAnyGetterDTO;
+import com.org.project.jackson.object.mapper.DTO.JsonAnySetterDTO;
+import com.org.project.jackson.object.mapper.DTO.JsonPropertyDTO;
 
 @RestController
 public class JacksonObjectMapperController {

@@ -3,7 +3,6 @@ package com.org.project.jackson.object.mapper.DTO;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.annotation.JsonRootName;
 
 /*
  * JsonProperty will access first
@@ -16,12 +15,12 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 //@JsonRootName(value = "user")
 public class JsonPropertyDTO {
 
-	@JsonProperty(value = "Id",defaultValue = "100")
-	private Long id;
+	@JsonProperty(value = "Id", defaultValue = "100")
+	private Long   id;
 
 	private String name;
 
-	private Long age;
+	private Long   age;
 
 	public Long getId() {
 		return id;
